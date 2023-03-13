@@ -9,6 +9,10 @@ html {
     font-size: 19px;
 
     line-height: 2;
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
   }
 
   .mobile-header {
@@ -315,66 +319,64 @@ html {
           display: flex;
           flex-wrap: wrap;
           justify-content: space-between;
-          .good {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            width: 250px;
-            margin: 100px 0 0 0;
-            img {
+          .good-link {
+            .good {
               position: relative;
-              height: 300px;
-              width: 100px;
-              align-self: center;
-              margin-bottom: 45px;
-            }
-            :nth-child(2) {
-              font-size: 18px;
-            }
-            :nth-child(3) {
-              color: orange;
-              font-size: 18px;
-            }
-            :nth-child(4) {
-              color: rgb(173, 170, 170);
-              margin: 20px 0 0 0;
-            }
-            :nth-child(5) {
-              color: rgb(173, 170, 170);
-            }
-            ::first-letter {
-              text-transform: uppercase;
-            }
-            .price {
               display: flex;
-              justify-content: space-between;
-              align-items: flex-end;
-              color: rgb(173, 170, 170);
-              margin: 20px 0 0 0;
-              :first-child {
+              flex-direction: column;
+              width: 250px;
+              margin: 100px 0 0 0;
+              img {
+                position: relative;
+                height: 300px;
+                width: 100px;
+                align-self: center;
+                margin-bottom: 45px;
+              }
+              :nth-child(2) {
+                font-size: 18px;
+              }
+              :nth-child(3) {
                 color: orange;
-                font-size: 20px;
+                font-size: 18px;
+              }
+              :nth-child(4) {
+                color: rgb(173, 170, 170);
+                margin: 20px 0 0 0;
+              }
+              :nth-child(5) {
+                color: rgb(173, 170, 170);
+              }
+              ::first-letter {
+                text-transform: uppercase;
+              }
+              .price {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                color: rgb(173, 170, 170);
+                margin: 20px 0 0 0;
+                :first-child {
+                  color: orange;
+                  font-size: 20px;
+                }
+              }
+    
+              &:before {
+                content: url("../img/bestseller/beginers.png");
+                position: absolute;
+                top: -20px;
+                left: 0;
+              }
+              &::after {
+                content: url("../img/bestseller/shadow.png");
+                position: absolute;
+                top: 100px;
+                left: 70px;
               }
             }
-  
-            &:before {
-              content: url("../img/bestseller/beginers.png");
-              position: absolute;
-              top: -20px;
-              left: 0;
-            }
-            &::after {
-              content: url("../img/bestseller/shadow.png");
-              position: absolute;
-              top: 100px;
-              left: 70px;
-            }
-          }
-          a {
-            text-decoration: none;
-            color: orange;
             &:hover {
-              opacity: 0.6;
+              box-shadow: 0px 0px 35px 6px rgba(207,199,207,1);
             }
           }
         }
@@ -532,9 +534,9 @@ html {
               position: absolute;
               top: 50px;
               left: 50px;
-            }
-          }
-        }
+            }            
+          }          
+        }        
       }
       .marker-wrap {
         width: 100%;
